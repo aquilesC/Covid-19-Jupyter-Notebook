@@ -14,37 +14,37 @@ The notebook explores different countries and compares them, also shifting the d
 This is the evolution of the number of active cases in China over time. This number is the total number of confirmed cases excluding recoveries and deaths. I believe this plot is much more illustrative of the situation than just the cumulative sum of detected cases. 
 
 Since the evolution of the number of cases spans several orders of magnitude, it may be better to plot the information in logarithmic scale:
-![China in Log Scale]('./Figures/China_Log_Lin.png')
+![China in Log Scale](./Figures/China_Log_Lin.png)
 
 ### Europe over time
 Europe as a whole is being very badly hit by the spread of nCOV19. Below you can see the evolution of the number of active cases in different countries. 
 
-![Europe in Log Scale]('./Figures/Europe_Log_Lin_01.png')
+![Europe in Log Scale](./Figures/Europe_Log_Lin_01.png)
 
 It is possible to see that the onset of the epidemic in each country happens at different times. Instead of relying on the first detected case, I shift the temporal information of the countries by the moment in which 10 cases were detected and use *Italy* as a reference. The fact I use 10 cases instead of the first is that there are a lot of statistical fluctuations when the number of cases is low. For example, one detected case may be contained and eventually recover, until a second case appears. From the plots above, it seems that once there are 10 cases detected in a country, there is no going back in the evolution of the spread. 
 
-![Europe shifted according to Italy]('./Figures/Europe_countries_shifted_log_lin.png')
+![Europe shifted according to Italy](./Figures/Europe_countries_shifted_log_lin.png)
 
 To give a bit more context, we can also add the dates of lockdowns or cease of activities, using the same temporal scale than in the previous plot. Some countries such as Italy went into full lockdown, while some countries, such as The Netherlands are in a state where some activities are forbidden (bars, restaurants), schools are closed, but people are not banned from going out even without reason. 
 
-![Europe shifted according to Italy showing lockdowns]('./Figures/Europe_countries_shifted_log_lin_with_lockdowns.png')
+![Europe shifted according to Italy showing lockdowns](./Figures/Europe_countries_shifted_log_lin_with_lockdowns.png)
 
 And of course, we can show the same data but in a linear scale, since log-scale may be slightly counter-intuitive for people who are just getting acquainted with exponential processes:
 
-![Europe shifted according to Italy showing lockdowns in linear scale]('./Figures/Europe_countries_shifted_lin_lin_with_lockdowns.png')
+![Europe shifted according to Italy showing lockdowns in linear scale](./Figures/Europe_countries_shifted_lin_lin_with_lockdowns.png)
 
 ### Latin America
 Another interesting region to observe is Latin America. Each country is showing very different evolutions over time. 
 
-![Some latin american countries over time in log-lin scale]('./Figures/Latin_America_Log_Lin.png')
+![Some latin american countries over time in log-lin scale](./Figures/Latin_America_Log_Lin.png)
 
 And as an example, we can see the difference between **Italy** and **Argentina**, two countries that have established complete lockdowns to prevent the spread:
 
-![Argentina and Italy with lockdowns in log-lin scale]('./Figures/Argentina_Italy_log_lin_with_lockdowns.png')
+![Argentina and Italy with lockdowns in log-lin scale](./Figures/Argentina_Italy_log_lin_with_lockdowns.png)
 
 The same plot but in linear scale is very eloquent:
 
-![Argentina and Italy with lockdowns in lin-lin scale]('./Figures/Argentina_Italy_lin_lin_with_lockdowns.png')
+![Argentina and Italy with lockdowns in lin-lin scale](./Figures/Argentina_Italy_lin_lin_with_lockdowns.png)
 
 ## Contribute
 There are different ways of contributing to the code. If you identify a problem, you can create an [Issue](https://github.com/aquilesC/Covid-19-Jupyter-Notebook/issues) explaining what you found. If you know the solution or would like to improve any of its parts, I encourage you to create a fork of this repository, implement it and then submit a pull request. In this way, the authorship of the code will be nicely documented. 

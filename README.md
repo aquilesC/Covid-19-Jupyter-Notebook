@@ -11,13 +11,13 @@ The notebook explores different countries and compares them, also shifting the d
 ### China over time
 ![China in Linear Scale](./Figures/China_Lin_Lin.png)
 
-This is the evolution of the number of active cases in China over time. This number is the total number of confirmed cases excluding recoveries and deaths. I believe this plot is much more illustrative of the situation than just the cumulative sum of detected cases. 
+This is the evolution of the cumulative number of detected cases in China over time. In the past, there was data available regarding recoveries, and thus it was possible to make a plot like [this one](https://github.com/aquilesC/Covid-19-Jupyter-Notebook/blob/master/Figures_archive/China_Lin_Lin.png), in which you see the number of active cases. The problem is that recoveries is apparently badly reported through the world, and especially in the US. 
 
 Since the evolution of the number of cases spans several orders of magnitude, it may be better to plot the information in logarithmic scale:
 ![China in Log Scale](./Figures/China_Log_Lin.png)
 
 ### Europe over time
-Europe as a whole is being very badly hit by the spread of nCOV19. Below you can see the evolution of the number of active cases in different countries. 
+Europe as a whole is being very badly hit by the spread of nCOV19. Below you can see the cumulative number of detected cases in different countries. 
 
 ![Europe in Log Scale](./Figures/Europe_Log_Lin_01.png)
 
@@ -25,7 +25,7 @@ It is possible to see that the onset of the epidemic in each country happens at 
 
 ![Europe shifted according to Italy](./Figures/Europe_countries_shifted_log_lin.png)
 
-To give a bit more context, we can also add the dates of lockdowns or cease of activities, using the same temporal scale than in the previous plot. Some countries such as Italy went into full lockdown, while some countries, such as The Netherlands are in a state where some activities are forbidden (bars, restaurants), schools are closed, but people are not banned from going out even without reason. 
+To give a bit more context, we can also add the dates of lockdowns or cease of activities, using the same temporal scale than in the previous plot. Some countries, such as Italy, went into full lockdown, while some countries, such as The Netherlands, are in a state where some activities are forbidden (bars, restaurants), schools are closed, but people are not banned from going out even without reason. 
 
 ![Europe shifted according to Italy showing lockdowns](./Figures/Europe_countries_shifted_log_lin_with_lockdowns.png)
 

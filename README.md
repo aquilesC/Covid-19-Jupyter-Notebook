@@ -1,5 +1,8 @@
 # Covid-19-Jupyter-Notebook
-Example Jupyter notebook to explore the data of the ongoing COVID-19 Pandemic.
+**Author**: [Aquiles Carattino](https://www.aquicarattino.com)
+**Date**: 2020-03-29
+
+Example Jupyter notebook to explore the data of the ongoing COVID-19 Pandemic. The plots you see here were last generated on 2020-03-29 11:23:18.077016. 
 
 Data is pulled from [this repository](https://github.com/CSSEGISandData/COVID-19) which is updated regularly by the [Whiting School of Engineering of the Johns Hopkins University](https://systems.jhu.edu/research/public-health/ncov/).
 
@@ -11,10 +14,23 @@ The notebook explores different countries and compares them, also shifting the d
 ### China over time
 ![China in Linear Scale](./Figures/China_Lin_Lin.png)
 
-This is the evolution of the cumulative number of detected cases in China over time. In the past, there was data available regarding recoveries, and thus it was possible to make a plot like [this one](https://github.com/aquilesC/Covid-19-Jupyter-Notebook/blob/master/Figures_archive/China_Lin_Lin.png), in which you see the number of active cases. The problem is that recoveries is apparently badly reported through the world, and especially in the US. 
+This is the evolution of the cumulative number of detected cases in China over time. In the past, there was data available regarding recoveries, and thus it was possible to make a plot like [this one](https://github.com/aquilesC/Covid-19-Jupyter-Notebook/blob/master/Figures_archive/China_Lin_Lin.png), in which you see the number of active cases. The problem is that recoveries are apparently badly reported through the world, and especially in the US. 
 
 Since the evolution of the number of cases spans several orders of magnitude, it may be better to plot the information in logarithmic scale:
 ![China in Log Scale](./Figures/China_Log_Lin.png)
+
+### Log-Log Plots number of new cases
+The problem with plotting countries as a function of time is that the evolution of the pandemic is shifted. For example, in China, it started in December 2019, while the first detected cases in Europe or the US appeared only at the beginning of 2020. Plotting the number of new cases versus the number of cumulative cases can be a better way of visualizing the status of the pandemic. Let's see how **China** and **South Korea** compare to each other:
+
+![China Korea in Log-Log](./Figures/China_Korea_Log_Log_New_Cumulative.png)
+
+For the plot above, I am defining **new cases** as the difference in accumulated cases between two consecutive days. For these two countries, it is clear that as the epidemic progresses the number of new cases is proportional to the number of accumulated cases. Until, at some point, it drops abruptly. However, you can see that the data points are relatively noisy because of large statistical fluctuations in how new cases are reported, etc. In order to have a clear picture, instead of dealing directly with the number of new cases, I will apply a rolling window of 1 week and of 5 days, in order to smooth the data, and take into account, somehow, the variation in reporting days, etc.
+
+![China Korea weekly-average new cases](./Figures/China_Korea_Log_Log_New_Cumulative_weekly.png)
+
+![China Korea 5-day-average new cases](./Figures/China_Korea_Log_Log_New_Cumulative_5_days.png)
+
+The plots above are much cleaner. The idea of having a 5-day window is that it allows seeing quicker changes, which is what people are expecting. For example, is the lockdown in Spain or Italy working? With a 5-day window, there's a better chance to see any differences. See below for more plots. 
 
 ### Europe over time
 Europe as a whole is being very badly hit by the spread of nCOV19. Below you can see the cumulative number of detected cases in different countries. 
@@ -33,10 +49,17 @@ And of course, we can show the same data but in a linear scale, since log-scale 
 
 ![Europe shifted according to Italy showing lockdowns in linear scale](./Figures/Europe_countries_shifted_lin_lin_with_lockdowns.png)
 
+### Europe in Log-Log
+We can see the evolution of the pandemic in some European countries, to try to understand what is actually happening. The plot below is done with a 5-day rolling window in order to lower the fluctuations and consider the delays in case reporting, analysis, etc. 
+
+![Europe in Log-Log](./Figures/Europe_Log_Log_New_Cumulative_5_days.png)
+
+Both **Sweden** and **Denmark** show the same bump, which I can't explain. It is possible to see that Italy is the only country that is actively tilting the curve. 
+
 ### Latin America
 Another interesting region to observe is Latin America. Each country is showing very different evolutions over time. 
 
-![Some latin american countries over time in log-lin scale](./Figures/Latin_America_Log_Lin.png)
+![Some Latin American countries over time in log-lin scale](./Figures/Latin_America_Log_Lin.png)
 
 And as an example, we can see the difference between **Italy** and **Argentina**, two countries that have established complete lockdowns to prevent the spread:
 
@@ -45,6 +68,13 @@ And as an example, we can see the difference between **Italy** and **Argentina**
 The same plot but in linear scale is very eloquent:
 
 ![Argentina and Italy with lockdowns in lin-lin scale](./Figures/Argentina_Italy_lin_lin_with_lockdowns.png)
+
+### Latin America in Log-Log
+If we plot the Latin American evolution in log-log, with a 5-day rolling window for the calculation of new cases, we obtain the figure below. I am using US data as a reference for comparing:
+
+![Latin American countries in Log-Log new cases vs accumulated](./Figures/Latin_America_Log_Log_New_Cumulative_5_days.png)
+
+All countries are overlapping on the same curve, and they overlap to the US curve. 
 
 ## Contribute
 There are different ways of contributing to the code. If you identify a problem, you can create an [Issue](https://github.com/aquilesC/Covid-19-Jupyter-Notebook/issues) explaining what you found. If you know the solution or would like to improve any of its parts, I encourage you to create a fork of this repository, implement it and then submit a pull request. In this way, the authorship of the code will be nicely documented. 

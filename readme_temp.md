@@ -1,5 +1,6 @@
 # Covid-19-Jupyter-Notebook
 **Author**: [Aquiles Carattino](https://www.aquicarattino.com)
+
 **Date**: {date:%Y-%m-%d}
 
 Example Jupyter notebook to explore the data of the ongoing COVID-19 Pandemic. The plots you see here were last generated on {date}. 

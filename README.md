@@ -3,7 +3,7 @@
 
 **Date**: 2020-03-30
 
-Example Jupyter notebook to explore the data of the ongoing COVID-19 Pandemic. The plots you see here were last generated on 2020-03-30 08:33:47.253394. 
+Example Jupyter notebook to explore the data of the ongoing COVID-19 Pandemic. The plots you see here were last generated on 2020-03-30 09:13:05.332259. 
 
 Data is pulled from [this repository](https://github.com/CSSEGISandData/COVID-19) which is updated regularly by the [Whiting School of Engineering of the Johns Hopkins University](https://systems.jhu.edu/research/public-health/ncov/).
 

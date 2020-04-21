@@ -1,9 +1,9 @@
 # Covid-19-Jupyter-Notebook
 **Author**: [Aquiles Carattino](https://www.aquicarattino.com)
 
-**Date**: 2020-04-20
+**Date**: 2020-04-21
 
-Example Jupyter notebook to explore the data of the ongoing COVID-19 Pandemic. The plots you see here were last generated on 2020-04-20 12:48:24.364768. 
+Example Jupyter notebook to explore the data of the ongoing COVID-19 Pandemic. The plots you see here were last generated on 2020-04-21 07:57:00.638327. 
 
 Data is pulled from [this repository](https://github.com/CSSEGISandData/COVID-19) which is updated regularly by the [Whiting School of Engineering of the Johns Hopkins University](https://systems.jhu.edu/research/public-health/ncov/).
 
